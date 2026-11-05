@@ -1,0 +1,9 @@
+target/
+uploads/
+.env
+.git/
+.github/
+.mvn/wrapper/maven-wrapper.jar
+*.md
+.vscode/
+.idea/

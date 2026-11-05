@@ -1,0 +1,27 @@
+# Build output
+target/
+*.class
+
+# Local configuration and secrets — never commit
+.env
+*.env.local
+
+# Runtime uploads
+uploads/
+
+# IDEs
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

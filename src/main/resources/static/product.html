@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listing — UniTrade</title>
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/product.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/index.html">Home</a> / <a href="/marketplace.html">Marketplace</a> / <span id="crumb-title">Listing</span>
+    </nav>
+    <div id="product-root"></div>
+</main>
+
+<dialog id="report-dialog" aria-labelledby="report-title">
+    <form id="report-form" class="form" novalidate>
+        <div class="dialog-body">
+            <h3 id="report-title">Report this listing</h3>
+            <p class="small muted">Reports are reviewed by UniTrade moderators. The seller is not told who reported them.</p>
+            <div id="report-alert" class="hidden mb-2"></div>
+            <div class="field">
+                <label for="report-reason">Reason <span class="required" aria-hidden="true">*</span></label>
+                <select id="report-reason" name="reason" required></select>
+                <span class="error" data-for="reason"></span>
+            </div>
+            <div class="field mt-2">
+                <label for="report-details">Details (optional)</label>
+                <textarea id="report-details" name="details" maxlength="1000" placeholder="What is wrong with this listing?"></textarea>
+                <span class="error" data-for="details"></span>
+            </div>
+        </div>
+        <div class="dialog-actions">
+            <button type="button" class="btn btn-secondary" id="report-cancel">Cancel</button>
+            <button type="submit" class="btn btn-danger" id="report-submit">Submit report</button>
+        </div>
+    </form>
+</dialog>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

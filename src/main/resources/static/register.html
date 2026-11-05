@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create an account — UniTrade</title>
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/register.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <div class="card card-narrow">
+        <div class="card-body">
+            <h1>Create your student account</h1>
+            <p class="muted">Join UniTrade to buy and sell with students on your campus.</p>
+            <div id="form-alert" class="hidden mb-2"></div>
+            <form id="register-form" class="form" novalidate>
+                <div class="field">
+                    <label for="fullName">Full name <span class="required" aria-hidden="true">*</span></label>
+                    <input id="fullName" name="fullName" type="text" autocomplete="name" required minlength="2" maxlength="100">
+                    <span class="hint">Other students see only your first name and last initial.</span>
+                    <span class="error" data-for="fullName"></span>
+                </div>
+                <div class="field">
+                    <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required maxlength="191">
+                    <span class="error" data-for="email"></span>
+                </div>
+                <div class="field">
+                    <label for="campus">Campus <span class="required" aria-hidden="true">*</span></label>
+                    <select id="campus" name="campus" required></select>
+                    <span class="error" data-for="campus"></span>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone (optional)</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="15" placeholder="10-digit mobile number">
+                    <span class="hint">Private. Never shown on your listings.</span>
+                    <span class="error" data-for="phone"></span>
+                </div>
+                <div class="field">
+                    <label for="password">Password <span class="required" aria-hidden="true">*</span></label>
+                    <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8" maxlength="72" aria-describedby="password-hint">
+                    <span class="hint" id="password-hint">At least 8 characters, including a letter and a number.</span>
+                    <span class="error" data-for="password"></span>
+                </div>
+                <div class="field">
+                    <label for="confirmPassword">Confirm password <span class="required" aria-hidden="true">*</span></label>
+                    <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required maxlength="72">
+                    <span class="error" data-for="confirmPassword"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="register-submit">Create account</button>
+            </form>
+            <p class="small muted mt-2 mb-0">Already have an account? <a href="/login.html">Log in</a></p>
+        </div>
+    </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

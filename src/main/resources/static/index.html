@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UniTrade — Student marketplace for books, gadgets and lab gear</title>
+    <meta name="description" content="Buy and sell second-hand textbooks, calculators, electronics, lab equipment and project components with students on your campus.">
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/home.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main">
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <span class="badge badge-primary">Student-to-student marketplace</span>
+                <h1 class="mt-1">Buy and sell campus essentials, from students who've been there.</h1>
+                <p class="lead">Textbooks, scientific calculators, Arduino kits, drawing instruments and lab coats — at student prices, on your campus.</p>
+                <form class="search-bar" action="/marketplace.html" method="get" role="search">
+                    <label for="hero-search" class="sr-only">Search listings</label>
+                    <input id="hero-search" name="q" type="search" placeholder="Search for “DSA book” or “fx-991”" maxlength="100">
+                    <button class="btn btn-primary btn-lg" type="submit">Search</button>
+                </form>
+                <p class="small muted mt-2 mb-0">Have something to sell? <a href="/sell.html">List it in under a minute.</a></p>
+            </div>
+            <img class="hero-art" src="/images/hero.svg" alt="">
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Browse by category</h2>
+                <a href="/marketplace.html">View all listings →</a>
+            </div>
+            <div id="category-grid" class="category-grid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Recently listed</h2>
+                <a href="/marketplace.html?sort=newest">See more →</a>
+            </div>
+            <div id="recent"></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="mb-2">How UniTrade works</h2>
+            <div class="steps">
+                <div class="card step">
+                    <div class="step-num">1</div>
+                    <h3>Create your student account</h3>
+                    <p class="muted mb-0">Sign up with your email and choose your campus. Your phone and email are never shown publicly.</p>
+                </div>
+                <div class="card step">
+                    <div class="step-num">2</div>
+                    <h3>List or find an item</h3>
+                    <p class="muted mb-0">Post an item with photos and a price in rupees, or filter by category, campus, condition and budget.</p>
+                </div>
+                <div class="card step">
+                    <div class="step-num">3</div>
+                    <h3>Chat and meet on campus</h3>
+                    <p class="muted mb-0">Send an inquiry through UniTrade, agree on a price and meet in a public place on campus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace — UniTrade</title>
+    <meta name="description" content="Search second-hand student listings by category, campus, condition and price.">
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/marketplace.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <div class="page-head">
+        <h1>Marketplace</h1>
+        <p>Find second-hand books, gadgets and lab gear from students near you.</p>
+    </div>
+
+    <div class="market-layout">
+        <aside class="filters card" id="filters" aria-label="Filters">
+            <form id="filter-form" class="card-body">
+                <h2 class="h3 mb-0">Filters</h2>
+                <div class="field">
+                    <label for="f-category">Category</label>
+                    <select id="f-category" name="category"></select>
+                </div>
+                <div class="field">
+                    <label for="f-campus">Campus</label>
+                    <select id="f-campus" name="campus"></select>
+                </div>
+                <div class="field">
+                    <label for="f-condition">Condition</label>
+                    <select id="f-condition" name="condition"></select>
+                </div>
+                <fieldset class="field">
+                    <legend class="label">Price (₹)</legend>
+                    <div class="price-row">
+                        <label class="sr-only" for="f-min">Minimum price</label>
+                        <input id="f-min" name="minPrice" type="number" min="0" step="1" placeholder="Min" inputmode="numeric">
+                        <label class="sr-only" for="f-max">Maximum price</label>
+                        <input id="f-max" name="maxPrice" type="number" min="0" step="1" placeholder="Max" inputmode="numeric">
+                    </div>
+                    <span class="error" data-for="price"></span>
+                </fieldset>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Apply filters</button>
+                    <button type="button" class="btn btn-secondary" id="reset-filters">Reset</button>
+                </div>
+            </form>
+        </aside>
+
+        <section aria-labelledby="results-heading">
+            <h2 id="results-heading" class="sr-only">Results</h2>
+            <div class="results-bar">
+                <form id="search-form" class="search-inline" role="search">
+                    <label for="q" class="sr-only">Search listings</label>
+                    <input id="q" name="q" type="search" placeholder="Search titles and descriptions" maxlength="100">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary filters-toggle" id="filters-toggle" aria-controls="filters" aria-expanded="false">Filters</button>
+                    <label for="sort" class="sr-only">Sort by</label>
+                    <select id="sort" name="sort">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="price_asc">Price: low to high</option>
+                        <option value="price_desc">Price: high to low</option>
+                    </select>
+                </div>
+            </div>
+            <p id="result-count" class="small muted" aria-live="polite"></p>
+            <div id="results"></div>
+            <nav id="pagination" class="pagination" aria-label="Pagination"></nav>
+        </section>
+    </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

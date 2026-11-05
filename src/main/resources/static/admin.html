@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin moderation — UniTrade</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/admin.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <div class="page-head">
+        <h1>Moderation dashboard</h1>
+        <p>Review reported listings, moderate content and manage student accounts.</p>
+    </div>
+
+    <div id="admin-root">
+        <div class="stats mb-2" id="admin-stats"></div>
+
+        <div class="tabs" role="tablist" aria-label="Moderation sections">
+            <button class="tab" role="tab" id="tab-reports" data-tab="reports" aria-controls="panel" aria-selected="true">Reports <span class="badge badge-danger hidden" id="pending-badge"></span></button>
+            <button class="tab" role="tab" id="tab-listings" data-tab="listings" aria-controls="panel" aria-selected="false">Listings</button>
+            <button class="tab" role="tab" id="tab-users" data-tab="users" aria-controls="panel" aria-selected="false">Users</button>
+        </div>
+
+        <section class="card" id="panel" role="tabpanel" aria-labelledby="tab-reports">
+            <div class="card-body">
+                <div class="toolbar" id="toolbar"></div>
+                <div id="panel-content"></div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<dialog id="resolve-dialog" aria-labelledby="resolve-title">
+    <form id="resolve-form" novalidate>
+        <div class="dialog-body">
+            <h3 id="resolve-title">Resolve report</h3>
+            <p class="small muted" id="resolve-summary"></p>
+            <div class="field mt-2">
+                <label for="resolve-status">Decision</label>
+                <select id="resolve-status" name="status">
+                    <option value="ACTION_TAKEN">Action taken</option>
+                    <option value="DISMISSED">Dismiss (no violation)</option>
+                </select>
+            </div>
+            <label class="checkbox mt-2"><input type="checkbox" name="hideListing" id="resolve-hide"> Hide this listing from the marketplace</label>
+            <div class="field mt-2">
+                <label for="resolve-note">Moderator note (internal)</label>
+                <textarea id="resolve-note" name="adminNote" maxlength="500"></textarea>
+            </div>
+            <div id="resolve-alert" class="hidden mt-2"></div>
+        </div>
+        <div class="dialog-actions">
+            <button type="button" class="btn btn-secondary" id="resolve-cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="resolve-submit">Save decision</button>
+        </div>
+    </form>
+</dialog>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

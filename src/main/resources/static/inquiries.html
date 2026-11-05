@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inbox — UniTrade</title>
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/inquiries.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <div class="page-head">
+        <h1>Inbox</h1>
+        <p>Private conversations between buyers and sellers. Contact details are never shared automatically.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Inquiry folders">
+        <button class="tab" role="tab" id="tab-received" aria-controls="inbox-panel" aria-selected="true" data-tab="received">Received (as seller)</button>
+        <button class="tab" role="tab" id="tab-sent" aria-controls="inbox-panel" aria-selected="false" data-tab="sent">Sent (as buyer)</button>
+    </div>
+
+    <div class="card inbox" id="inbox-panel" role="tabpanel" aria-labelledby="tab-received">
+        <div class="inbox-list" id="inbox-list" aria-label="Conversations"></div>
+        <div class="thread" id="thread" aria-live="polite"></div>
+    </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

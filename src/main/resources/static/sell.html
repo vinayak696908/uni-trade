@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sell an item — UniTrade</title>
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/pages/sell.js"></script>
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main id="main" class="container">
+    <div class="card card-medium">
+        <div class="card-body">
+            <h1 id="sell-heading">Sell an item</h1>
+            <p class="muted" id="sell-subheading">Describe your item honestly and add clear photos — listings with photos sell faster.</p>
+            <div id="form-alert" class="hidden mb-2"></div>
+            <div id="sell-loading"></div>
+            <form id="sell-form" class="form hidden" novalidate>
+                <div class="field">
+                    <label for="title">Title <span class="required" aria-hidden="true">*</span></label>
+                    <input id="title" name="title" type="text" required minlength="3" maxlength="150" placeholder="e.g. Casio fx-991EX scientific calculator">
+                    <span class="error" data-for="title"></span>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="category">Category <span class="required" aria-hidden="true">*</span></label>
+                        <select id="category" name="category" required></select>
+                        <span class="error" data-for="category"></span>
+                    </div>
+                    <div class="field">
+                        <label for="condition">Condition <span class="required" aria-hidden="true">*</span></label>
+                        <select id="condition" name="condition" required></select>
+                        <span class="error" data-for="condition"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="price">Price (₹) <span class="required" aria-hidden="true">*</span></label>
+                        <input id="price" name="price" type="number" required min="1" max="1000000" step="0.01" inputmode="decimal" placeholder="e.g. 450">
+                        <span class="error" data-for="price"></span>
+                    </div>
+                    <div class="field">
+                        <label for="campus">Campus <span class="required" aria-hidden="true">*</span></label>
+                        <select id="campus" name="campus" required></select>
+                        <span class="error" data-for="campus"></span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="description">Description <span class="required" aria-hidden="true">*</span></label>
+                    <textarea id="description" name="description" required minlength="10" maxlength="4000" placeholder="Edition, model, how long you used it, any defects, what's included…"></textarea>
+                    <span class="hint"><span id="desc-count">0</span>/4000 characters</span>
+                    <span class="error" data-for="description"></span>
+                </div>
+
+                <div class="field image-picker">
+                    <span class="label" id="photos-label">Photos (up to 5 · JPEG, PNG or WebP · max 5 MB each)</span>
+                    <div id="existing-images" class="image-previews" aria-label="Current photos"></div>
+                    <div class="drop-zone">
+                        <label for="images" class="btn btn-secondary">Choose photos</label>
+                        <input id="images" name="images" type="file" accept="image/jpeg,image/png,image/webp" multiple class="sr-only" aria-labelledby="photos-label">
+                        <p class="small mb-0 mt-1">Selected photos are uploaded when you save.</p>
+                    </div>
+                    <div id="new-images" class="image-previews" aria-label="Photos to upload"></div>
+                    <span class="error" data-for="images"></span>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary btn-lg" id="sell-submit">Publish listing</button>
+                    <a class="btn btn-secondary btn-lg" href="/dashboard.html" id="sell-cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

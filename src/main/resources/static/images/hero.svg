@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" aria-hidden="true">
+  <rect x="20" y="40" width="320" height="230" rx="18" fill="#eef0fd"/>
+  <!-- books -->
+  <rect x="52" y="120" width="34" height="120" rx="4" fill="#4338ca"/>
+  <rect x="90" y="100" width="30" height="140" rx="4" fill="#6366f1"/>
+  <rect x="124" y="132" width="26" height="108" rx="4" fill="#a5b4fc"/>
+  <rect x="58" y="136" width="22" height="4" rx="2" fill="#c7d2fe"/>
+  <rect x="95" y="118" width="20" height="4" rx="2" fill="#e0e7ff"/>
+  <!-- calculator -->
+  <rect x="176" y="86" width="76" height="120" rx="10" fill="#1e1b4b"/>
+  <rect x="186" y="98" width="56" height="24" rx="4" fill="#c7f9cc"/>
+  <g fill="#6366f1">
+    <rect x="186" y="132" width="14" height="12" rx="3"/><rect x="207" y="132" width="14" height="12" rx="3"/><rect x="228" y="132" width="14" height="12" rx="3"/>
+    <rect x="186" y="150" width="14" height="12" rx="3"/><rect x="207" y="150" width="14" height="12" rx="3"/><rect x="228" y="150" width="14" height="12" rx="3"/>
+    <rect x="186" y="168" width="14" height="12" rx="3"/><rect x="207" y="168" width="14" height="12" rx="3"/><rect x="228" y="168" width="14" height="28" rx="3" fill="#f59e0b"/>
+  </g>
+  <!-- circuit board -->
+  <rect x="200" y="214" width="112" height="40" rx="6" fill="#15803d"/>
+  <rect x="212" y="224" width="22" height="20" rx="2" fill="#0f172a"/>
+  <circle cx="252" cy="234" r="5" fill="#fde68a"/><circle cx="270" cy="234" r="5" fill="#fca5a5"/><circle cx="288" cy="234" r="5" fill="#bfdbfe"/>
+  <!-- price tag -->
+  <g transform="translate(262 60) rotate(14)">
+    <path d="M0 0h52l14 18-14 18H0z" fill="#fff" stroke="#4338ca" stroke-width="3"/>
+    <circle cx="54" cy="18" r="4" fill="#4338ca"/>
+    <text x="8" y="25" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#4338ca">₹450</text>
+  </g>
+</svg>
