@@ -14,6 +14,8 @@ One process serves both the pages and the REST API: start Spring Boot, open <htt
 The repository includes a `Dockerfile`, `railway.json`, a `prod` profile, the Maven Wrapper and a GitHub Actions
 workflow that builds and tests the app against MySQL on every push.
 
+**Temporary preview:** [Open UniTrade](https://minnesota-advertisements-horizon-directed.trycloudflare.com/) via a temporary Cloudflare Tunnel. It is available only while the local app and tunnel are running, and the URL may expire.
+
 ---
 
 ## Contents
